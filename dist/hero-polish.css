@@ -1,0 +1,233 @@
+/* Focused refinements to the header and first screen. */
+.site-header {
+  background: #232925;
+  border-bottom-color: #ffffff35;
+}
+.desktop-nav {
+  gap: 34px;
+  font-size: 15px;
+  font-weight: 700;
+}
+.desktop-nav a {
+  padding-block: 18px;
+}
+.header-phone {
+  font-size: 18px;
+  letter-spacing: -.025em;
+}
+.header-phone small {
+  color: #d2d8cb;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0;
+}
+
+.hero {
+  background: radial-gradient(ellipse at 26% 38%, #39443a 0%, #2d382f 46%, #252d28 100%);
+}
+.hero-visual img {
+  filter: saturate(.76) brightness(1.12) contrast(1.035);
+}
+.photo-shade {
+  background:
+    linear-gradient(90deg, #26352b3d, transparent 42%),
+    linear-gradient(0deg, #202923a1 0%, transparent 35%);
+}
+.hero-content {
+  padding-top: 55px;
+}
+.hero-eyebrow {
+  color: #e3eadb;
+  font-size: 11px;
+  margin-bottom: 29px;
+}
+.hero h1 {
+  max-width: 850px;
+  font-family: 'Unbounded', var(--body);
+  font-size: clamp(43px, 3.35vw, 64px);
+  font-weight: 800;
+  line-height: 1.14;
+  letter-spacing: -.065em;
+  text-transform: uppercase;
+  text-shadow: 0 5px 28px #14201732;
+  user-select: none;
+  -webkit-user-select: none;
+  caret-color: transparent;
+  pointer-events: none;
+}
+.hero h1 .line {
+  padding-bottom: .11em;
+  margin-bottom: -.05em;
+}
+.hero h1 .title-second {
+  font-size: 1.09em;
+}
+.hero h1 .title-third {
+  font-size: 1.045em;
+}
+.hero h1 .title-third > span {
+  background: linear-gradient(94deg, #efff69 2%, #dcec55 45%, #b8e78a 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+}
+.hero-description {
+  color: #e2e9db;
+  font-size: 15px;
+  line-height: 1.75;
+  margin-top: 32px;
+}
+.hero-actions {
+  gap: 16px;
+  margin-top: 30px;
+}
+.hero .button {
+  min-height: 58px;
+  font-size: 13px;
+}
+.hero-text-link {
+  min-height: 58px;
+  padding: 14px 21px;
+  border: 1px solid #eef4e7;
+  background: #eef4e7;
+  color: #1d291e;
+  font-size: 13px;
+  font-weight: 800;
+  gap: 20px;
+  transition: background .25s, border-color .25s, transform .25s;
+}
+.hero-text-link:hover {
+  transform: translateY(-2px);
+  background: #f4ffc8;
+  border-color: var(--accent);
+}
+.hero-text-link svg {
+  width: 20px;
+  height: 20px;
+  color: #293625;
+  transform: rotate(90deg);
+}
+.hero-contacts {
+  margin-top: 25px;
+  animation: fade-up 1s .8s both;
+}
+.hero-contact-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  column-gap: 28px;
+  row-gap: 8px;
+}
+.hero-location,
+.hero-contact-phone {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin: 0;
+  color: #f1f4eb;
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 1.5;
+}
+.hero-location svg,
+.hero-contact-phone svg {
+  width: 17px;
+  height: 17px;
+  color: var(--accent);
+}
+.hero-location > span {
+  margin-left: 2px;
+  color: var(--accent);
+  font-size: 18px;
+}
+.hero-contacts a:hover { color: var(--accent); }
+.hero-hours {
+  margin-top: 9px;
+  color: #cdd8c7;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: .01em;
+  line-height: 1.6;
+}
+.hero-hours span { color: #f3f6ea; }
+.hero-hours i { font-style: normal; padding-inline: 7px; }
+.hero-rating {
+  background: #243027e6;
+  border-color: #ffffff52;
+}
+.hero-rating > span { font-size: 11px; }
+
+@media (min-width: 1550px) {
+  .hero-content { padding-top: 75px; }
+  .hero h1 { font-size: 68px; }
+  .hero-description { font-size: 16px; }
+}
+@media (max-width: 1100px) {
+  .desktop-nav { gap: 22px; font-size: 13px; }
+  .header-phone { font-size: 15px; }
+  .header-phone small { font-size: 11px; }
+  .hero h1 { font-size: clamp(40px, 4.3vw, 50px); }
+  .hero-text-link { font-size: 12px; padding-inline: 16px; }
+  .hero-location, .hero-contact-phone { font-size: 12px; }
+}
+@media (max-width: 800px) {
+  .header-phone { font-size: 15px; }
+  .header-phone small { font-size: 10px; }
+  .hero-content { padding-top: 50px; }
+  .hero h1 { font-size: clamp(40px, 6vw, 54px); }
+  .hero h1 .title-first { font-size: .85em; }
+  .hero h1 .title-third { font-size: .95em; }
+  .hero-eyebrow { font-size: 9px; }
+  .hero-description { font-size: 13px; margin-top: 24px; }
+  .hero .button, .hero-text-link { min-height: 52px; font-size: 11px; }
+  .hero-contact-row { column-gap: 17px; }
+  .hero-visual { opacity: .88; }
+}
+@media (max-width: 600px) {
+  .hero { min-height: 790px; max-height: 950px; }
+  .hero-content { padding-top: 39px; }
+  .hero-eyebrow { font-size: 9px; margin-bottom: 22px; }
+  .hero h1 {
+    max-width: 100%;
+    font-size: clamp(30px, 8.9vw, 45px);
+    letter-spacing: -.072em;
+    line-height: 1.17;
+  }
+  .hero h1 .title-first { font-size: .82em; }
+  .hero h1 .title-second { font-size: 1.06em; }
+  .hero h1 .title-third { font-size: .98em; }
+  .hero-description {
+    font-size: 12px;
+    margin-top: 24px;
+    color: #f3f5eb;
+  }
+  .hero-actions { gap: 9px; margin-top: 20px; }
+  .hero .button { min-height: 49px; font-size: 10px; padding: 11px 13px; gap: 12px; }
+  .hero-text-link { min-height: 49px; font-size: 10px; padding: 11px 12px; gap: 9px; }
+  .hero-text-link svg { width: 16px; height: 16px; }
+  .hero-contacts {
+    margin-top: 18px;
+    width: max-content;
+    max-width: calc(100vw - 40px);
+    padding: 11px 13px;
+    background: #253027d1;
+    border-left: 2px solid var(--accent);
+  }
+  .hero-contact-row { display: grid; gap: 5px; }
+  .hero-location, .hero-contact-phone { font-size: 11px; }
+  .hero-hours { font-size: 10px; margin-top: 6px; }
+  .hero-visual { top: 290px; opacity: .9; }
+  .photo-shade {
+    background: linear-gradient(180deg, #2b382fe8 0%, #2b382f55 35%, transparent 60%),
+      linear-gradient(0deg, #273129 0%, transparent 42%);
+  }
+  .hero-rating { background: #243027e6; }
+}
+@media (max-width: 360px) {
+  .hero h1 { font-size: 8.65vw; }
+  .hero .button { font-size: 9px; gap: 8px; }
+  .hero-text-link { font-size: 9px; padding-inline: 10px; gap: 6px; }
+  .hero-location, .hero-contact-phone { font-size: 10px; }
+  .hero-hours { font-size: 9px; }
+}
